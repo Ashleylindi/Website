@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            background-image: url("/static/emile-perron-xrVDYZRGdw4-unsplash.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #33333300; /* Dark background color */
+            overflow: hidden; /* Clear floats */
+            position: fixed; /* Fixed position at the top */
+            width: 100%; /* Full width */
+            z-index: 1000; /* Ensure it's on top of other content */
+        }
+        .navbar a {
+            display: inline-block; /* Display links as inline-block elements */
+            color: white; /* White text color */
+            text-align: center; /* Center-align text */
+            padding: 14px 20px; /* Padding around text */
+            text-decoration: none; /* Remove underline */
+        }
+        .navbar a:hover {
+            background-color: #dddddd00; /* Gray background color on hover */
+            color: black; /* Black text color on hover */
+        }
+        .content {
+            padding-top: 120px; /* Adjust padding for content to account for fixed navbar */
+            padding-left: 60px; /* Adjust content padding for left alignment */
+        }
+        h1 {
+            font-size: 4em; /* Adjust the font size as needed */
+            margin-bottom: 10px; /* Increase the space between h1 and paragraphs */
+        }
+        h2 {
+            font-size: 2em; /* Adjust the font size as needed */
+            margin-bottom: 20px; /* Increase the space between h2 and paragraphs */
+        }
+        p {
+            margin-bottom: 10px; /* Adjust margin bottom for paragraphs */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contacts">Contacts</a>
+    </div>
+
+    <div class="content">
+        <div id="home">
+            <h1>Ashley Xaba</h1>
+            <h2>Software Engineering Student</h2>
+            <p>Hello! I’m Ashley, a passionate Software Development Student.</p>
+            <p>Dive into my projects to see how I turn ideas into reality.</p>
+            <p>Each piece showcases my skills, creativity, and dedication to delivering top-notch results.</p>
+            <p>I’m always open to new opportunities and collaborations if you’d like to discuss a project.</p>
+        </div>
+    </div>
+</body>
+</html>
