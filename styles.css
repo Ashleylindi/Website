@@ -4,15 +4,19 @@
 body, html {
     margin: 0;
     padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Style for the entire container */
 .container {
-    background-color: #f0f0f0; /* Grey background */
+    background-color: rgb(126, 128, 128); /* Grey background */
     padding: 10px;
     display: flex;
     flex-direction: column; /* Stack items vertically */
     align-items: center;
+    min-height: 100vh; /* Ensure container takes full viewport height */
 }
 
 /* Style for the header */
@@ -37,7 +41,7 @@ body, html {
 
 .logo a:hover {
     color: white; /* Logo text color on hover */
-    background-color: black; /* Background color on hover */
+    background-color: grey; /* Background color on hover */
 }
 
 /* Style for the navigation */
@@ -47,6 +51,7 @@ body, html {
     padding: 0;
     display: flex;
     align-items: center; /* Align items vertically */
+    font-size: 1.2rem;
 }
 
 .header ul li {
@@ -60,31 +65,47 @@ body, html {
 
 .header ul li a:hover {
     color: white; /* Navigation text color on hover */
-    background-color: black; /* Background color on hover */
+    background-color: grey; /* Background color on hover */
 }
 
 /* Style for the hero section */
 .wrapper {
     text-align: center; /* Center align content in the wrapper */
     margin-top: 20px; /* Add space between navigation and hero section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex: 1;
 }
 
 .hero {
     display: flex;
     flex-direction: row; /* Arrange items side by side */
-    align-items: flex-start; /* Align items to the start */
+    align-items: center; /* Align items to the start */
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .hero .image-wrapper {
     flex: 1; /* Let the image take all available space */
     max-width: 50%; /* Limit image width */
     margin-right: 20px; /* Add space between image and text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Make the image wrapper take full viewport height */
+    overflow: hidden; /* Hide the overflowing part of the image */
 }
 
 .hero .image-wrapper img {
     width: 100%; /* Ensure image takes full width of its container */
     height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Cover the container without stretching */
+    height: 100%; /* Ensure image takes full height of its container */
+
 }
 
 .hero > div {
@@ -93,43 +114,72 @@ body, html {
     text-align: left; /* Align text content to the left */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    height: 100%; /* Ensure text content takes full height of its container */
 }
 
-.hero > div h4,
-.hero > div h1,
-.hero > div h2 {
-    margin-top: 0; /* Remove default margin for headings */
+/* Flex container for the download button and social icons */
+.hero .flex-end {
+    display: flex;
+    justify-content: space-between; /* Distribute space between the button and social icons */
+    align-items: center;
+    width: 100%; /* Ensure it takes full width of the hero div */
 }
 
-.hero > div p:last-child {
-    margin-bottom: 0; /* Remove bottom margin for the last paragraph */
+button {
+    border: 2px solid black; /* Black border */
+    background-color: transparent; /* No background color */
+    color: black; /* Text color */
+    padding: 10px 20px; /* Padding for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1rem; /* Font size */
+    margin-top: 30px; /* Space between the text and the button */
 }
 
-/* Align "Download CV" button and social icons with the image */
-.hero > div > div {
-    align-self: flex-end; /* Align at the end of the column */
-    margin-top: auto; /* Push content to the bottom */
-}
-
-.hero > div > div button {
-    margin-right: 20px; /* Add space between button and icons */
+button:hover {
+    background-color: rgb(44, 173, 220);
+    color: white;
 }
 
 .social i {
-    font-size: 1.5rem; /* Adjust icon size */
-    color: rgba(11, 12, 12, 0.916); /* Icon color */
+    font-size: 2.5rem;
+    color: rgb(1, 1, 1);
+    transition: color 0.3s;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.social i:hover {
+    color: rgb(44, 173, 220);
 }
 
 /* Media query for responsive layout */
 @media (max-width: 768px) {
     .hero {
-        flex-direction: column;/* Stack items vertically on smaller screens */
+        flex-direction: column; /* Stack items vertically on smaller screens */
     }
 
     .hero .image-wrapper {
         max-width: 100%; /* Allow image to take full width on smaller screens */
         margin-right: 0; /* Remove margin for image on smaller screens */
         margin-bottom: 20px; /* Add space between image and text on smaller screens */
+        height: auto; /* Let the image wrapper adapt to the image size */
+    }
+
+    .hero .image-wrapper img {
+        height: auto; /* Let the image adapt to its container size */
+    }
+
+    .hero > div {
+        height: auto; /* Let the text container adapt to its content */
+    }
+
+    .hero .flex-end {
+        flex-direction: column; /* Stack the button and social icons vertically on smaller screens */
+    }
+
+    .social i {
+        margin-left: 10;
+        margin-top: 10px;
     }
 }
