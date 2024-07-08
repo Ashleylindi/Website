@@ -1,44 +1,135 @@
-body {
-    background-image: url("/static/emile-perron-xrVDYZRGdw4-unsplash.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-    font-family: Arial, sans-serif;
-    color: white;
+/* styles.css */
+
+/* Reset default margin and padding */
+body, html {
     margin: 0;
     padding: 0;
 }
-.navbar {
-    background-color: #33333300; /* Dark background color */
-    overflow: hidden; /* Clear floats */
-    position: fixed; /* Fixed position at the top */
-    width: 100%; /* Full width */
-    z-index: 1000; /* Ensure it's on top of other content */
+
+/* Style for the entire container */
+.container {
+    background-color: #f0f0f0; /* Grey background */
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
 }
-.navbar a {
-    display: inline-block; /* Display links as inline-block elements */
-    color: white; /* White text color */
-    text-align: center; /* Center-align text */
-    padding: 14px 20px; /* Padding around text */
-    text-decoration: none; /* Remove underline */
+
+/* Style for the header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Take full width of container */
 }
-.navbar a:hover {
-    background-color: #dddddd00; /* Gray background color on hover */
-    color: black; /* Black text color on hover */
+
+/* Style for the logo */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: auto; /* Push logo to the left */
 }
-.content {
-    padding-top: 120px; /* Adjust padding for content to account for fixed navbar */
-    padding-left: 60px; /* Adjust content padding for left alignment */
+
+.logo a {
+    text-decoration: none;
+    color: black; /* Logo text color */
 }
-h1 {
-    font-size: 4em; /* Adjust the font size as needed */
-    margin-bottom: 10px; /* Increase the space between h1 and paragraphs */
+
+.logo a:hover {
+    color: white; /* Logo text color on hover */
+    background-color: black; /* Background color on hover */
 }
-h2 {
-    font-size: 2em; /* Adjust the font size as needed */
-    margin-bottom: 20px; /* Increase the space between h2 and paragraphs */
+
+/* Style for the navigation */
+.header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; /* Align items vertically */
 }
-p {
-    margin-bottom: 10px; /* Adjust margin bottom for paragraphs */
+
+.header ul li {
+    margin-right: 20px;
+}
+
+.header ul li a {
+    text-decoration: none;
+    color: black; /* Navigation text color */
+}
+
+.header ul li a:hover {
+    color: white; /* Navigation text color on hover */
+    background-color: black; /* Background color on hover */
+}
+
+/* Style for the hero section */
+.wrapper {
+    text-align: center; /* Center align content in the wrapper */
+    margin-top: 20px; /* Add space between navigation and hero section */
+}
+
+.hero {
+    display: flex;
+    flex-direction: row; /* Arrange items side by side */
+    align-items: flex-start; /* Align items to the start */
+}
+
+.hero .image-wrapper {
+    flex: 1; /* Let the image take all available space */
+    max-width: 50%; /* Limit image width */
+    margin-right: 20px; /* Add space between image and text */
+}
+
+.hero .image-wrapper img {
+    width: 100%; /* Ensure image takes full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the container without stretching */
+}
+
+.hero > div {
+    flex: 1; /* Let the text content take all available space */
+    padding: 20px;
+    text-align: left; /* Align text content to the left */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hero > div h4,
+.hero > div h1,
+.hero > div h2 {
+    margin-top: 0; /* Remove default margin for headings */
+}
+
+.hero > div p:last-child {
+    margin-bottom: 0; /* Remove bottom margin for the last paragraph */
+}
+
+/* Align "Download CV" button and social icons with the image */
+.hero > div > div {
+    align-self: flex-end; /* Align at the end of the column */
+    margin-top: auto; /* Push content to the bottom */
+}
+
+.hero > div > div button {
+    margin-right: 20px; /* Add space between button and icons */
+}
+
+.social i {
+    font-size: 1.5rem; /* Adjust icon size */
+    color: rgba(11, 12, 12, 0.916); /* Icon color */
+}
+
+/* Media query for responsive layout */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;/* Stack items vertically on smaller screens */
+    }
+
+    .hero .image-wrapper {
+        max-width: 100%; /* Allow image to take full width on smaller screens */
+        margin-right: 0; /* Remove margin for image on smaller screens */
+        margin-bottom: 20px; /* Add space between image and text on smaller screens */
+    }
 }
