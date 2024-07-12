@@ -153,6 +153,47 @@ button:hover {
     color: rgb(44, 173, 220);
 }
 
+/* New styles for skills and professional skills section */
+.skills-professional-skills {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.skills, .professional-skills {
+    width: 45%;
+}
+
+.skills h2, .interests h2 {
+    margin-bottom: 20px;
+    color: black;
+}
+
+.skill {
+    margin-bottom: 30px;
+}
+
+.skill p {
+    margin: 0;
+    color: black;
+}
+
+.skill-bar {
+    width: 100%;
+    background-color: #ddd;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background-color: #29afb6;
+    border-radius: 10px;
+}
+
 /* Media query for responsive layout */
 @media (max-width: 768px) {
     .hero {
@@ -182,4 +223,5 @@ button:hover {
         margin-left: 10;
         margin-top: 10px;
     }
+
 }
