@@ -1,0 +1,170 @@
+/* Reset default margin and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Style for the entire container */
+.container {
+    background-color: rgb(126, 128, 128); /* Grey background */
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    min-height: 100vh; /* Ensure container takes full viewport height */
+}
+
+/* Style for the header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Take full width of container */
+}
+
+/* Style for the logo */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: auto; /* Push logo to the left */
+}
+
+.logo a {
+    text-decoration: none;
+    color: black; /* Logo text color */
+}
+
+.logo a:hover {
+    color: white; /* Logo text color on hover */
+    background-color: grey; /* Background color on hover */
+}
+
+.header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; /* Align items vertically */
+    font-size: 1.2rem;
+}
+
+.header ul li {
+    margin-right: 20px;
+}
+
+.header ul li a {
+    text-decoration: none;
+    color: black; /* Navigation text color */
+}
+
+.header ul li a:hover {
+    color: white; /* Navigation text color on hover */
+    background-color: grey; /* Background color on hover */
+}
+
+/* Main section containing both contact form and image */
+.main {
+    display: flex;
+    flex-direction: row; /* Side by side layout for large screens */
+    width: 100%;
+    max-width: 1200px; /* Limit the maximum width */
+    margin: 20px auto; /* Center the main section */
+}
+
+/* Style for the contact section */
+.contact {
+    flex: 1; /* Take up remaining space */
+    max-width: 600px; /* Limit the width of the contact form */
+    margin-right: 20px; /* Space between contact form and image */
+    padding: 50px;
+    background-color: #e0e0e0; /* White background for form section */
+    border: 2px solid black; /* Black border around the contact section */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.contact h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: black; /* Header color */
+    text-align: center; /* Center align contact title */
+}
+
+/* Style for the form elements */
+form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid black; /* Border color for form inputs */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 1rem;
+}
+
+form textarea {
+    resize: vertical; /* Allow vertical resizing only */
+    min-height: 100px; /* Minimum height for textarea */
+}
+
+form button {
+    border: 2px solid black; /* Black border */
+    background-color: transparent; /* No background color */
+    color: black; /* Text color */
+    padding: 10px 20px; /* Padding for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1rem; /* Font size */
+    margin-top: 30px; /* Space between the text and the button */
+}
+
+form button:hover {
+    background-color: #6ea9c5;
+    box-shadow: 0 0 20px #6ea9c5, 0 0 30px #6ea9c5, 0 0 40px #6ea9c5;
+    color: black; /* Text color on hover */
+}
+
+/* Style for the graphic */
+.graphic {
+    flex: 1; /* Let the image take all available space */
+    max-width: 50%; /* Limit image width */
+    margin-left: 20px; /* Add space between image and text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Make the image wrapper take full viewport height */
+    overflow: hidden; /* Hide the overflowing part of the image */
+}
+
+.graphic img {    
+    width: 100%; /* Ensure image takes full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the container without stretching */
+    height: 100%; /* Ensure image takes full height of its container */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column; /* Stack contact and image vertically on small screens */
+    }
+
+    .contact {
+        margin-right: 0; /* Remove right margin when stacked */
+        margin-bottom: 20px; /* Add space below contact form */
+    }
+
+    .graphic {
+        max-width: 100%; /* Ensure image doesn't overflow */
+        margin-left: 0; /* Remove left margin when stacked */
+    }
+}

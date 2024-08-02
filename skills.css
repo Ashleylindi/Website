@@ -1,0 +1,127 @@
+/* Reset default margin and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Style for the entire container */
+.container {
+    background-color: rgb(126, 128, 128); /* Grey background */
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    min-height: 100vh; /* Ensure container takes full viewport height */
+}
+
+/* Style for the header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Take full width of container */
+}
+
+/* Style for the logo */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: auto; /* Push logo to the left */
+}
+
+.logo a {
+    text-decoration: none;
+    color: black; /* Logo text color */
+}
+
+.logo a:hover {
+    color: white; /* Logo text color on hover */
+    background-color: grey; /* Background color on hover */
+}
+
+/* Style for the navigation */
+.header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; /* Align items vertically */
+    font-size: 1.2rem;
+}
+
+.header ul li {
+    margin-right: 20px;
+}
+
+.header ul li a {
+    text-decoration: none;
+    color: black; /* Navigation text color */
+}
+
+.header ul li a:hover {
+    color: white; /* Navigation text color on hover */
+    background-color: grey; /* Background color on hover */
+}
+
+/* Style for the skills section */
+.skills {
+    text-align: left; /* Align text to the left */
+    color: black; /* Set text color to black */
+    margin-top: 30px; /* Ensure spacing is consistent */
+}
+
+/* Section titles styling */
+.skills h2 {
+    font-size: 3 rem; /* Use consistent font size */
+    margin-bottom: 20px;
+    color: black; /* Title color */
+}
+
+/* Technical skills and professional skills section styling */
+.technical-skills, .professional-skills {
+    margin-bottom: 40px; /* Spacing between sections */
+}
+
+/* Diamond skills container */
+.diamond-skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Align items to the left */
+    gap: 20px;
+}
+
+/* Individual diamond skill styling */
+.diamond-skill {
+    width: 100px;
+    height: 100px;
+    background: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transform: rotate(45deg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s, color 0.3s;
+}
+
+.diamond-skill span {
+    transform: rotate(-45deg);
+    font-size: 1rem; /* Ensure text is readable */
+    color: black; /* Initial color for the text inside the diamond */
+    text-align: center; /* Center text inside the diamond */
+}
+
+.diamond-skill:hover {
+    background-color: #6ea9c5;
+    box-shadow: 0 0 20px #6ea9c5, 0 0 30px #6ea9c5, 0 0 40px #6ea9c5;
+    transform: rotate(45deg) scale(1.1);
+    color: white; /* Text color on hover */
+}
+
+.diamond-skill:hover span {
+    color: white; /* Color change on hover */
+}

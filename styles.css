@@ -138,7 +138,9 @@ button {
 
 button:hover {
     background-color: rgb(44, 173, 220);
-    color: white;
+    box-shadow: 0 0 20px #6ea9c5, 0 0 30px #6ea9c5, 0 0 40px #6ea9c5;
+
+    color: black;
 }
 
 .social i {
@@ -150,48 +152,9 @@ button:hover {
 }
 
 .social i:hover {
-    color: rgb(44, 173, 220);
-}
-
-/* New styles for skills and professional skills section */
-.skills-professional-skills {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    width: 100%;
-    max-width: 1200px;
-}
-
-.skills, .professional-skills {
-    width: 45%;
-}
-
-.skills h2, .interests h2 {
-    margin-bottom: 20px;
-    color: black;
-}
-
-.skill {
-    margin-bottom: 30px;
-}
-
-.skill p {
-    margin: 0;
-    color: black;
-}
-
-.skill-bar {
-    width: 100%;
-    background-color: #ddd;
-    height: 20px;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.skill-level {
-    height: 100%;
-    background-color: #29afb6;
-    border-radius: 10px;
+    background-color: #6ea9c5;
+    box-shadow: 0 0 20px #6ea9c5, 0 0 30px #6ea9c5, 0 0 40px #6ea9c5;
+    color: black; /* Text color on hover */
 }
 
 /* Media query for responsive layout */

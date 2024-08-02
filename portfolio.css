@@ -1,0 +1,122 @@
+/* Reset default margin and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Style for the entire container */
+.container {
+    background-color: rgb(126, 128, 128); /* Grey background */
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    min-height: 100vh; /* Ensure container takes full viewport height */
+}
+
+/* Style for the header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Take full width of container */
+}
+
+/* Style for the logo */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: auto; /* Push logo to the left */
+}
+
+.logo a {
+    text-decoration: none;
+    color: black; /* Logo text color */
+}
+
+.logo a:hover {
+    color: white; /* Logo text color on hover */
+    background-color: grey; /* Background color on hover */
+}
+
+.header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; /* Align items vertically */
+    font-size: 1.2rem;
+}
+
+.header ul li {
+    margin-right: 20px;
+}
+
+.header ul li a {
+    text-decoration: none;
+    color: black; /* Navigation text color */
+}
+
+.header ul li a:hover {
+    color: white; /* Navigation text color on hover */
+    background-color: grey; /* Background color on hover */
+}
+
+/* Style for the portfolio section */
+.portfolio {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto; /* Center portfolio section */
+    padding: 20px;
+    background-color: grey; /* White background for portfolio section */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.portfolio h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: black; /* Header color */
+    text-align: center; /* Center align portfolio title */
+}
+
+/* Portfolio items styling */
+.portfolio-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    background-color: #e0e0e0; /* Light background for items */
+    border: 2px solid black; /* Black border around each item */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Shadow for items */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+.portfolio-item:hover {
+    background-color: #e0e0e0; /* Change background color on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+.portfolio-item h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333; /* Title color */
+}
+
+.portfolio-item p {
+    font-size: 1rem;
+    color: #555; /* Text color */
+    margin-bottom: 10px;
+}
+
+.portfolio-item a {
+    text-decoration: none;
+    color: #6ea9c5; /* Link color */
+    font-weight: bold;
+}
+
+.portfolio-item a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
