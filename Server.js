@@ -9,10 +9,8 @@ const port = 3000;
 // Middleware to parse JSON data
 app.use(bodyParser.json());
 
-// Serve static files (HTML, CSS, JS)
-app.use(express.static(path.join(__dirname, 'html')));
-app.use(express.static(path.join(__dirname, 'css')));
-app.use(express.static(path.join(__dirname, 'js')));
+// Serve all static files from the 'public' directory
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.post('/send-email', (req, res) => {
     const { name, email, message } = req.body;
