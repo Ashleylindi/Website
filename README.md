@@ -96,10 +96,3 @@ Email: <lindix332@gmail.com>
 GitHub: <https://github.com/Ashleylindi>
 
 LinkedIn: <https://www.linkedin.com/in/ashley-xaba-aa027921a/>
-
-## Instructions
-
-- Replace the GitHub repository link in the **Clone the repository** section with your actual repository URL.
-- Update the **Contact Information** with your correct social media and email links.
-
-Let me know if you'd like any adjustments!
