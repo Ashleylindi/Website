@@ -95,4 +95,4 @@ Email: <lindix332@gmail.com>
 
 GitHub: <https://github.com/Ashleylindi>
 
-LinkedIn: <https://www.linkedin.com/in/ashley-xaba-aa027921a/>
+LinkedIn: <https://www.linkedin.com/in/ashleylindi/>
