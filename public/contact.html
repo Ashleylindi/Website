@@ -3,48 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Page</title>
-    <link rel="stylesheet" href="/css/contact.css">
+    <meta name="description" content="Contact Ashley Xaba - Get in touch for collaborations and opportunities">
+    <meta name="author" content="Ashley Xaba">
+    <title>Contact | Ashley Lindi Xaba</title>
+    <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <div class="header">
+        <!-- Header/Navigation -->
+        <header class="header">
             <div class="logo">
                 <a href="index.html">ASHLEY</a>
             </div>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/skills.html">Skills</a></li>
-                <li><a href="/portfolio.html">Portfolio</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-            </ul>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
             
-        </div>
-
-        <div class="main">
+            <!-- Contact Form Section -->
             <div class="contact">
-                <h1>Contact Me</h1>
+                <h1>Get In Touch</h1>
+                <p class="contact-subtitle">Have a project in mind or just want to chat? Feel free to reach out. I'd love to hear from you!</p>
+                
                 <form id="contactForm">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
+                    </div>
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                    </div>
 
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" placeholder="Tell me about your project or inquiry..." required></textarea>
+                    </div>
 
-                    <button type="submit">Send Message</button>
+                    <button type="submit">
+                        Send Message
+                    </button>
                 </form>
+
+                <!-- Message Display (Success/Error) -->
+                <div id="formMessage" class="form-message"></div>
             </div>
 
-            <div class="graphic">
-                <img src="/static/1.png" alt="Hero Image">
+            <!-- Contact Information Section -->
+            <div class="contact-info">
+                
+                <!-- Email Card -->
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Email</h3>
+                        <p><a href="mailto:lindix332@gmail.com">lindix332@gmail.com</a></p>
+                    </div>
+                </div>
+
+                <!-- Location Card -->
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Location</h3>
+                        <p>Johannesburg, South Africa</p>
+                    </div>
+                </div>
+
+                <!-- Availability Card -->
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Availability</h3>
+                        <p>Open to new opportunities</p>
+                    </div>
+                </div>
+
+                <!-- Social Media Links -->
+                <div class="social-links">
+                    <h3>Connect With Me</h3>
+                    <div class="social-icons">
+                        <a href="https://github.com/Ashleylindi" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ashley-xaba-aa027921a/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://medium.com/@axaba023" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Medium">
+                            <i class="fab fa-medium-m"></i>
+                        </a>
+                        <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
             </div>
-        </div>
+        </main>
     </div>
-    <link rel="stylesheet" href="/css/contact.css">
-    <script src="/js/contact.js"></script>
+
+    <!-- Contact Form Script -->
+    <script src="js/contact.js"></script>
 </body>
 </html>

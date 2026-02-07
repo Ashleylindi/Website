@@ -3,50 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills Page</title>
-    <link rel="stylesheet" href="/css/skills.css">
+    <meta name="description" content="Ashley Xaba - Technical and Professional Skills">
+    <meta name="author" content="Ashley Lindi Xaba">
+    <title>Skills | Ashley Lindi Xaba</title>
+    
+    <!-- Upgraded CSS -->
+    <link rel="stylesheet" href="css/skills.css">
+    
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
     <div class="container">
+        <!-- Header/Navigation -->
         <header class="header">
             <div class="logo">
                 <a href="index.html">ASHLEY</a>
             </div>
             <nav>
                 <ul>
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/skills.html">Skills</a></li>
-                    <li><a href="/portfolio.html">Portfolio</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                </ul>                
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </nav>
         </header>
 
+        <!-- Main Skills Content -->
         <main class="skills">
             
+            <!-- Technical Skills Section -->
             <section class="technical-skills">
                 <h1>Technical Skills</h1>
                 <div class="diamond-skill-container">
-                    <div class="diamond-skill"><span>Python</span></div>
-                    <div class="diamond-skill"><span>Java</span></div>
-                    <div class="diamond-skill"><span>CSS</span></div>
-                    <div class="diamond-skill"><span>HTML</span></div>
-                    <div class="diamond-skill"><span>SQL</span></div>
+                    <div class="diamond-skill">
+                        <span>Python</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 90%;"></div>
+                        </div>
+                        <p class="skill-level">Advanced</p>
+                    </div>
+                    <div class="diamond-skill">
+                        <span>Java</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%;"></div>
+                        </div>
+                        <p class="skill-level">Advanced</p>
+                    </div>
+                    <div class="diamond-skill">
+                        <span>CSS</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 88%;"></div>
+                        </div>
+                        <p class="skill-level">Advanced</p>
+                    </div>
+                    <div class="diamond-skill">
+                        <span>HTML</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 92%;"></div>
+                        </div>
+                        <p class="skill-level">Expert</p>
+                    </div>
+                    <div class="diamond-skill">
+                        <span>SQL</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 80%;"></div>
+                        </div>
+                        <p class="skill-level">Intermediate</p>
+                    </div>
                 </div>
             </section>
 
+            <!-- Professional Skills Section -->
             <section class="professional-skills">
                 <h1>Professional Skills</h1>
                 <div class="diamond-skill-container">
-                    <div class="diamond-skill"><span>Communication</span></div>
-                    <div class="diamond-skill"><span>Teamwork</span></div>
-                    <div class="diamond-skill"><span>Problem-Solving</span></div>
-                    <div class="diamond-skill"><span>Time Management</span></div>
-                    <div class="diamond-skill"><span>Leadership</span></div>
+                    <div class="diamond-skill">
+                        <span>Communication</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 90%;"></div>
+                        </div>
+                        <p class="skill-level">Excellent</p>
+                    </div>
+                    <div class="diamond-skill">
+                        <span>Teamwork</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 88%;"></div>
+                        </div>
+                        <p class="skill-level">Excellent</p>
+                    </div>
+                    <div class="diamond-skill">
+                        <span>Problem-Solving</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 92%;"></div>
+                        </div>
+                        <p class="skill-level">Expert</p>
+                    </div>
+                    <div class="diamond-skill">
+                        <span>Time Management</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%;"></div>
+                        </div>
+                        <p class="skill-level">Excellent</p>
+                    </div>
+                    <div class="diamond-skill">
+                        <span>Leadership</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 87%;"></div>
+                        </div>
+                        <p class="skill-level">Excellent</p>
+                    </div>
                 </div>
             </section>
         </main>
     </div>
+
+    <!-- Optional: Add this script for scroll-triggered animations -->
+    <script>
+        // Animate progress bars when scrolling into view
+        const observerOptions = {
+            threshold: 0.3,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all skill cards
+        document.querySelectorAll('.diamond-skill').forEach(skill => {
+            observer.observe(skill);
+        });
+    </script>
 </body>
 </html>

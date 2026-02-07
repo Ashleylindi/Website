@@ -3,47 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Page</title>
-    <link rel="stylesheet" href="/css/portfolio.css">
+    <meta name="description" content="Ashley Xaba - Project Portfolio and Work Showcase">
+    <meta name="author" content="Ashley Lindi Xaba">
+    <title>Portfolio | Ashley Lindi Xaba</title>
+    <link rel="stylesheet" href="css/portfolio.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <div class="header">
+        <!-- Header/Navigation -->
+        <header class="header">
             <div class="logo">
                 <a href="index.html">ASHLEY</a>
             </div>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/skills.html">Skills</a></li>
-                <li><a href="/portfolio.html">Portfolio</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-            </ul>
-            
-        </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-        <div class="portfolio">
-            <h1>Portfolio</h1>
+        <!-- Portfolio Section -->
+        <main class="portfolio">
+            <h1>My Portfolio</h1>
 
-            <div class="portfolio-item">
-                <h2>First Project</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non ultricies justo, a semper lorem. Fusce ullamcorper urna nec leo pulvinar...</p>
-                <a href="#">View Project</a>
+            <div class="portfolio-grid">
+                
+                <!-- Project 1 -->
+                <article class="portfolio-item">
+                    <div class="project-number">01</div>
+                    <div class="project-image">
+                        <i class="fas fa-code"></i>
+                        <!-- Replace with actual image: <img src="images/project1.jpg" alt="First Project"> -->
+                    </div>
+                    <div class="project-content">
+                        <h2>E-Commerce Platform</h2>
+                        <p>A full-stack e-commerce solution built with modern web technologies. Features include user authentication, product management, shopping cart functionality, and secure payment integration.</p>
+                        
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">React</span>
+                            <span class="tag">SQL</span>
+                        </div>
+                        
+                        <a href="#" target="_blank">View Project</a>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="portfolio-item">
+                    <div class="project-number">02</div>
+                    <div class="project-image">
+                        <i class="fas fa-mobile-alt"></i>
+                        <!-- Replace with actual image: <img src="images/project2.jpg" alt="Second Project"> -->
+                    </div>
+                    <div class="project-content">
+                        <h2>Task Management App</h2>
+                        <p>A responsive task management application that helps teams collaborate efficiently. Includes real-time updates, drag-and-drop functionality, and advanced filtering options.</p>
+                        
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                        
+                        <a href="#" target="_blank">View Project</a>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="portfolio-item">
+                    <div class="project-number">03</div>
+                    <div class="project-image">
+                        <i class="fas fa-chart-line"></i>
+                        <!-- Replace with actual image: <img src="images/project3.jpg" alt="Third Project"> -->
+                    </div>
+                    <div class="project-content">
+                        <h2>Data Analytics Dashboard</h2>
+                        <p>An interactive data visualization dashboard that transforms complex datasets into actionable insights. Features customizable charts, real-time data processing, and export capabilities.</p>
+                        
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">D3.js</span>
+                            <span class="tag">Flask</span>
+                        </div>
+                        
+                        <a href="#" target="_blank">View Project</a>
+                    </div>
+                </article>
             </div>
-
-            <div class="portfolio-item">
-                <h2>Second Project</h2>
-                <p>Phasellus in luctus metus. Nunc aliquam auctor elit, a eleifend nisl luctus vel. Proin at malesuada risus...</p>
-                <a href="#">View Project</a>
-            </div>
-
-            <div class="portfolio-item">
-                <h2>Third Project</h2>
-                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec vel mauris ac tellus congue consequat...</p>
-                <a href="#">View Project</a>
-            </div>
-
-        </div>
+        </main>
     </div>
 </body>
 </html>
