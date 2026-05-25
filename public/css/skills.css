@@ -1,0 +1,417 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    background-color: #ffb6d9;
+    background-image:
+        linear-gradient(45deg, #ffcce6 25%, transparent 25%),
+        linear-gradient(-45deg, #ffcce6 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #ffcce6 75%),
+        linear-gradient(-45deg, transparent 75%, #ffcce6 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    color: #5a2d4c;
+    font-family: 'Segoe UI', 'Poppins', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 95%;
+    margin: auto;
+    padding: 20px 30px;
+    position: relative;
+    z-index: 1;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    background: #fff0f7;
+    border: 2px solid #ff85b3;
+    border-radius: 10px;
+    box-shadow: 
+        4px 4px 0px #ff85b3,
+        0 0 20px rgba(255, 133, 179, 0.3);
+    position: relative;
+    top: 10px;
+    z-index: 100;
+    overflow: hidden;
+}
+
+/* Pink title bar strip */
+.header::before {
+    content: '♡ portfolio ♡';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #ff85b3, #ffadd6, #ff85b3);
+    color: #fff;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    text-align: center;
+    padding: 3px 0;
+    font-family: 'Courier New', monospace;
+}
+
+/* Push header content below title bar */
+.logo,
+.header ul {
+    margin-top: 24px;
+    margin-bottom: 10px;
+}
+
+/* LOGO */
+.logo {
+    padding-left: 20px;
+}
+
+.logo a {
+    color: #e0457b;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    text-shadow: 
+        2px 2px 0px #ffb6d9,
+        0 0 10px rgba(224, 69, 123, 0.3);
+    position: relative;
+}
+
+.logo a::after {
+    content: ' ♡';
+    animation: blink 1s step-end infinite;
+    color: #ff85b3;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
+}
+
+.logo a:hover {
+    color: #ff4499;
+    text-shadow: 
+        2px 2px 0px #ffb6d9,
+        0 0 15px rgba(255, 68, 153, 0.5);
+}
+
+/* NAV */
+.header ul {
+    display: flex;
+    list-style: none;
+    gap: 4px;
+    padding-right: 20px;
+}
+
+.header ul li a {
+    text-decoration: none;
+    color: #c2527a;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    padding: 5px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 133, 179, 0.4);
+    background: rgba(255, 192, 220, 0.2);
+    transition: all 0.3s ease;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.header ul li a:hover {
+    color: #fff;
+    background: #ff85b3;
+    border-color: #ff85b3;
+    box-shadow: 2px 2px 0px #e0457b;
+    transform: translateY(-2px);
+}
+
+/* =====================
+   SKILLS PAGE
+   ===================== */
+
+.skills-wrapper {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/* SECTION PANEL */
+.skill-panel {
+    background: #fff5f9;
+    border: 2px solid #ff85b3;
+    border-radius: 10px;
+    box-shadow: 
+        5px 5px 0px #ff85b3,
+        0 0 20px rgba(255, 133, 179, 0.15);
+    padding: 44px 30px 30px 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Retro title bar */
+.skill-panel::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #ff85b3, #ffadd6, #ff85b3);
+    color: #fff;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    text-align: center;
+    padding: 4px 0;
+    font-family: 'Courier New', monospace;
+}
+
+.skill-panel.technical::before {
+    content: '✦ technical skills ✦';
+}
+
+.skill-panel.professional::before {
+    content: '✦ soft skills ✦';
+}
+
+/* Section heading */
+.skill-panel h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #e0457b;
+    margin-bottom: 24px;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0px #ffb6d9;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.skill-panel h2::before {
+    content: '♡';
+    color: #ff85b3;
+    font-size: 1rem;
+    animation: blink 1.5s step-end infinite;
+}
+
+/* =====================
+   TECHNICAL & TOOLS — ICON CARDS GRID
+   ===================== */
+
+   .skill-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 16px;
+}
+
+.skill-card {
+    background: #fff0f7;
+    border: 2px solid #ffb6d9;
+    border-radius: 10px;
+    padding: 18px 10px;
+    text-align: center;
+    box-shadow: 3px 3px 0px #ffb6d9;
+    transition: all 0.25s ease;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* shimmer sweep on hover */
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent
+    );
+    transition: 0.5s ease;
+}
+
+.skill-card:hover::before {
+    left: 150%;
+}
+
+.skill-card i,
+.skill-card img.skill-icon {
+    font-size: 2.2rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    color: #e0457b;
+    transition: 0.3s;
+}
+
+.skill-card span {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #c2527a;
+    letter-spacing: 0.5px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.skill-card:hover {
+    background: #ff85b3;
+    border-color: #e0457b;
+    box-shadow: 5px 5px 0px #e0457b;
+    transform: translate(-2px, -2px);
+}
+
+.skill-card:hover i,
+.skill-card:hover img.skill-icon,
+.skill-card:hover span {
+    color: #fff;
+    filter: brightness(10);
+}
+
+/* =====================
+   SOFT SKILLS — PILL TAGS
+   ===================== */
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 18px;
+    background: #fff0f7;
+    border: 2px solid #ffb6d9;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #c2527a;
+    letter-spacing: 0.5px;
+    box-shadow: 3px 3px 0px #ffb6d9;
+    transition: all 0.25s ease;
+    cursor: default;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.skill-tag::before {
+    content: '✿';
+    font-size: 0.8rem;
+    color: #ff85b3;
+}
+
+.skill-tag:hover {
+    background: #ff85b3;
+    border-color: #e0457b;
+    color: #fff;
+    box-shadow: 4px 4px 0px #e0457b;
+    transform: translate(-2px, -2px);
+}
+
+.skill-tag:hover::before {
+    content: '♡';
+    color: #fff;
+}
+
+/* =====================
+   TOOLS — ICON CARDS GRID
+   ===================== */
+
+.skill-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 16px;
+}
+
+.skill-card {
+    background: #fff0f7;
+    border: 2px solid #ffb6d9;
+    border-radius: 10px;
+    padding: 16px 10px;
+    text-align: center;
+    box-shadow: 3px 3px 0px #ffb6d9;
+    transition: all 0.25s ease;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.skill-card i {
+    font-size: 2rem;
+    color: #e0457b;
+    transition: 0.3s;
+}
+
+.skill-card span {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #c2527a;
+    letter-spacing: 0.5px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.skill-card:hover {
+    background: #ff85b3;
+    border-color: #e0457b;
+    box-shadow: 5px 5px 0px #e0457b;
+    transform: translate(-2px, -2px);
+}
+
+.skill-card:hover i,
+.skill-card:hover span {
+    color: #fff;
+}
+
+/* =====================
+   RESPONSIVE
+   ===================== */
+
+@media (max-width: 1024px) {
+    .container {
+        max-width: 100%;
+        padding: 15px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px 15px;
+    }
+
+    .skill-cards {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+
+    .skill-panel h2 {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .skill-tags {
+        justify-content: center;
+    }
+
+    .header ul {
+        gap: 4px;
+    }
+}
