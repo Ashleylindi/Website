@@ -93,7 +93,7 @@ It showcases:
   <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExanVrNDZudm4zMHQ5eW91bG5raGQydXYyMHB5Z3JpNWtqamU4bHFqNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4C1Ru7IY51rGHKl4Db/giphy.gif" width="200px" />
 </div>
 
-<h2><span style="color:pink;">✧･ﾟ: * thanks for visiting my digital space *:･ﾟ✧</span></h2>
+✧･ﾟ: * thanks for visiting my digital space *:･ﾟ✧
 ---
 
 ## 📄 License
