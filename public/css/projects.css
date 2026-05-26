@@ -39,7 +39,7 @@ body {
   border: 2px solid #ff85b3;
   border-radius: 10px;
   box-shadow: 4px 4px 0px #ff85b3, 0 0 20px rgba(255, 133, 179, 0.3);
-  position: sticky;
+  position: relative;
   top: 10px;
   z-index: 100;
   overflow: hidden;
@@ -377,6 +377,10 @@ body {
 }
 
 /* RESPONSIVE */
+/* =====================
+   RESPONSIVE
+   ===================== */
+
 @media (max-width: 1024px) {
   .container {
     max-width: 100%;
@@ -398,10 +402,53 @@ body {
   }
 
   .header ul {
-    gap: 4px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 6px;
+    padding-right: 8px;
+    min-width: 0;
+    scrollbar-width: none;
+  }
+
+  .header ul::-webkit-scrollbar {
+    display: none;
   }
 
   .page-heading h1 {
     font-size: 1.5rem;
+  }
+}
+
+/* HEADER SMALL SCREEN FIX */
+@media (max-width: 480px) {
+  .header {
+    flex-wrap: nowrap;
+    min-width: 0;
+  }
+
+  .logo {
+    flex-shrink: 0;
+    min-width: fit-content;
+  }
+
+  .header ul {
+    gap: 2px;
+    padding-right: 8px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    min-width: 0;
+    scrollbar-width: none;
+  }
+
+  .header ul::-webkit-scrollbar {
+    display: none;
+  }
+
+  .header ul li a {
+    font-size: 0.7rem;
+    padding: 4px 7px;
+    letter-spacing: 0;
+    white-space: nowrap;
   }
 }
