@@ -1,5 +1,6 @@
 # 🌸 Portfolio Website 🌸
 
+
 ### ✧･ﾟ: *Neocities-inspired retro pink portfolio* *:･ﾟ✧
 
 <div style="display: flex; justify-content: left; gap: 100px;">
@@ -92,7 +93,7 @@ It showcases:
   <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExanVrNDZudm4zMHQ5eW91bG5raGQydXYyMHB5Z3JpNWtqamU4bHFqNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4C1Ru7IY51rGHKl4Db/giphy.gif" width="200px" />
 </div>
 
-✧･ﾟ: * thanks for visiting my digital space *:･ﾟ✧
+<h2><span style="color:pink;">✧･ﾟ: * thanks for visiting my digital space *:･ﾟ✧</span></h2>
 ---
 
 ## 📄 License
