@@ -43,14 +43,14 @@ It showcases:
 ---
 
 ### 📁 Projects Page
-<img src="projects.png" />
+<img src="projects.png" width="700px" />
 
 💗 Card-style project showcase with hover effects
 
 ---
 
 ### 💌 Contact Page
-<img src="contact.png" />
+<img src="contact.png" width="700px" />
 
 🌸 Simple and aesthetic contact section
 
@@ -79,8 +79,8 @@ It showcases:
 <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeTl5NWthbjgxNmt0azlsY3Vyanp0N3dsNncyOHhqbTI4eGxrcDIwNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fUNGb8eMRelIi9Sit8/giphy.gif" width="160px" />
 
 📧 Email: **lindix332@gmail.com**  
-💼 LinkedIn: **Ashley Xaba**  
-🐙 GitHub: **@Ashleylindi**
+💼 LinkedIn: **https://www.linkedin.com/in/ashleylindi**  
+🐙 GitHub: **https://github.com/Ashleylindi**
 
 ---
 
