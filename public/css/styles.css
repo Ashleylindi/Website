@@ -21,6 +21,14 @@ body {
     overflow-x: hidden;
 }
 
+/* CONTAINER */
+.container {
+  max-width: 95%;
+  margin: auto;
+  padding: 20px 30px;
+  position: relative;
+  z-index: 1;
+}
 
 /* HERO WRAPPER */
 .wrapper {
